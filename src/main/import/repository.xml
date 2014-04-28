@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <flickr-demo-module j:dependencies="default"
+        <flickr-demo-module j:dependencies="default sample-bootstrap-templates"
                           j:modulePriority="0"
                           j:moduleType="module"
                           j:title="flickr-demo-module"
@@ -14,6 +14,42 @@
                 <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
                     <files jcr:primaryType="jnt:folder"/>
                     <contents jcr:primaryType="jnt:contentFolder"/>
+                    <flickr-photo j:applyOn="jnt:flickrPhoto"
+                          j:defaultTemplate="true"
+                          j:hiddenTemplate="false"
+                          j:priority="10"
+                          jcr:primaryType="jnt:contentTemplate">
+                        <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="flickr-photo"/>
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <bootstrap-layer-container-rows-a jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                                    jcr:primaryType="jnt:bootstrapFullComponent"
+                                                    layout="8_4"
+                                                    rowType="predefined">
+                                <row jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                          jcr:primaryType="jnt:bootstrapFullComponentRow"
+                          layout="0"
+                          rowType="predefined">
+                                    <row jcr:primaryType="jnt:contentList">
+                                        <rich-text jcr:primaryType="jnt:bigText">
+                                            <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" text="&lt;hr /&gt;&#xA;&#xA;"/>
+                                        </rich-text>
+                                        <back-to-previous-page jcr:primaryType="jnt:backToParentPage">
+                                            <j:translation_en jcr:language="en"
+                                                jcr:mixinTypes="mix:title"
+                                                jcr:primaryType="jnt:translation"
+                                                jcr:title="Back to previous page"/>
+                                        </back-to-previous-page>
+                                </row>
+                                </row>
+                                <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
+                                    <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                            </bootstrap-layer-container-rows-a>
+                            </bootstrap-layer-container-rows-a>
+                        </pagecontent>
+                    </flickr-photo>
                 </templates>
                 
             </flickr-demo-module>

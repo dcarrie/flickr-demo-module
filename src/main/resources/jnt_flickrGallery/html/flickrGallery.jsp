@@ -20,7 +20,6 @@
     <template:addResources type="css" resources="jquery.fancybox.css"/>
 </c:if>
 
-Whahahaha !!
 <h2>${currentNode.properties['jcr:title'].string}</h2>
 
 ${currentNode.properties.body.string}

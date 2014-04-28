@@ -1,17 +1,19 @@
-<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
 
 [jmix:flickrDemo] > jmix:droppableContent mixin
-
-[jnt:flickrGallery] > jnt:content, jmix:flickrDemo, mix:title
- - body (string, richtext) i18n
- - apiKey (string) mandatory
- - sharedSecret (string) mandatory
- - userID (string) mandatory indexed=no
- - maxPhotos (long) = 10 mandatory
- - copyPhotosBinary (boolean) = false
- + * (jnt:flickrPhoto)
 
 [jnt:flickrPhoto] > jnt:content, mix:title
  - photoURL (string) mandatory
  + binary (jnt:file)
+
+[jnt:flickrGallery] > jnt:content, jmix:flickrDemo, mix:title
+ - body (string, richtext) internationalized
+ - apiKey (string) = 'f44007124162419c3bd1efde78f06316' mandatory
+ - sharedSecret (string) = '2573624714a26662' mandatory
+ - userID (string) mandatory indexed=no
+ - maxPhotos (long) = '10' mandatory
+ - copyPhotosBinary (boolean) = 'false'
+ + * (jnt:flickrPhoto)
+
