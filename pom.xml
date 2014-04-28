@@ -85,8 +85,8 @@
   <name>Flickr Demo Module</name>
   <description>This is the custom module (Flickr Demo Module) for running on a Digital Factory server.</description>
   <scm>
-    <connection>scm:dummy:uri</connection>
-    <developerConnection>scm:dummy:uri</developerConnection>
+    <connection>scm:git:git@github.com:dcarrie/flickr-demo-module.git</connection>
+    <developerConnection>scm:git:git@github.com:dcarrie/flickr-demo-module.git</developerConnection>
   </scm>
   <dependencies>
     <dependency>
